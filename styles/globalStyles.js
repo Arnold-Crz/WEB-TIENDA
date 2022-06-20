@@ -1,7 +1,28 @@
 import { createGlobalStyle } from 'styled-components';
 
 const GlobalStyle = createGlobalStyle`
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;600;800&display=swap');
+  
+/* 
+  --primer-color: #05060b; //negro
+  --segundo-color: #0072f5; //azul
+  --tercero-color: #de2ff7; //rosado
+  --cuarto-color: #9750dd; //purpura
+  --quinto-color: #FFFFFF; //blanco
+  --sexto-color: #223546; //azul_oscuro
+  --septimo-color: #35363a; //gris
+
+
+ */
+
+:root{
+  --primer-color: #05060b; 
+  --segundo-color: #0072f5; 
+  --tercero-color: #de2ff7; 
+  --cuarto-color: #9750dd; 
+  --quinto-color: #FFFFFF; 
+  --sexto-color: #223546; 
+  --septimo-color: #35363a;
+}
 
 html {
   margin: 0 auto;

@@ -77,7 +77,7 @@ const Nav = styled.nav`
   justify-content: space-between;
   width: 100vw;
   height: 50px;
-  background-image: linear-gradient(144deg, #1363df, #47b5ff 50%, #91e0ff);
+  background-color: var(--primer-color);
   position: relative;
   overflow: hidden;
 `;
@@ -91,10 +91,10 @@ const Nav_Logo = styled.div`
 
   h1 {
     font-size: 1.5rem;
-    color: #fff;
+    color: var(--quinto-color);
   }
   svg {
-    fill: #fff;
+    fill: var(--quinto-color);
   }
 `;
 
@@ -116,10 +116,9 @@ const Nav_Center = styled.div`
       width: 100vw;
       height: 100vh;
       overflow: hidden;
-      background-color: #25d2e9;
+      background-color: var(--septimo-color);
       clip-path: circle(0% at 96% 5%);
       transition: all 0.8s ease-in-out;
-
       &.active {
         clip-path: circle(100% at 86% 50%);
       }
@@ -127,11 +126,11 @@ const Nav_Center = styled.div`
 
     li > a {
       font-size: 1rem;
-      color: #fff;
+      color: var(--quinto-color);
       @media screen and (max-width: 768px) {
         position: relative;
         font-size: 2rem;
-        color: #fff;
+        color: var(--quinto-color);
         font-weight: 700;
         line-height: 4rem;
         text-transform: uppercase;
@@ -139,7 +138,7 @@ const Nav_Center = styled.div`
         ::after {
           content: attr(data-title);
           position: absolute;
-          color: #fff;
+          color: var(--quinto-color);
           font-size: 4rem;
           font-weight: 700;
           top: 50%;
@@ -167,13 +166,13 @@ const Nav_Right = styled.div`
   margin-right: 10px;
 
   @media screen and (max-width: 768px) {
-    gap: 20px;
+    gap: 10px;
     margin-right: 0;
   }
   .nav_shop > svg {
     fill: #fff;
-    width: 25px;
-    height: 25px;
+    width: 30px;
+    height: 30px;
   }
   .nav_menu {
     display: none;
