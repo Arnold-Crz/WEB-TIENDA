@@ -37,13 +37,13 @@ html {
 }
 
 ::-webkit-scrollbar {
-  width: 15px;
+  width: 10px;
   background-color: #dbdbdb;
 }
 
 ::-webkit-scrollbar-thumb {
   background-color: #1895fc;
-  border-radius: 50px;
+  
 }
 
 footer {

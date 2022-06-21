@@ -14,9 +14,7 @@ function Layout({ children, title }) {
         />
         <meta name="autor" content="Arnold Cruz" />
       </Head>
-      <header>
-        <Navbar />
-      </header>
+      <Navbar />
       <main>{children}</main>
     </>
   );

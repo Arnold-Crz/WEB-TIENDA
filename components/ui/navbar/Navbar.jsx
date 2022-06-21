@@ -10,50 +10,9 @@ export function Navbar() {
     setActive(!active);
   };
   return (
-    <Nav>
-      <Nav_Logo>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          viewBox="0 0 24 24"
-          width="24"
-          height="24"
-        >
-          <path fill="none" d="M0 0h24v24H0z" />
-          <path d="M11 12l-7.071 7.071-1.414-1.414L8.172 12 2.515 6.343 3.929 4.93 11 12zm0 7h10v2H11v-2z" />
-        </svg>
-        <h1>DevCruz</h1>
-      </Nav_Logo>
-      <Nav_Center>
-        <ul className={`${active && 'active'}`}>
-          <li>
-            <a data-title="Inicio" href="#">
-              Inicio{' '}
-            </a>
-          </li>
-          <li>
-            <a data-title="Nosotros" href="#">
-              Nosotros
-            </a>
-          </li>
-          <li>
-            <a data-title="Tienda" href="#">
-              Tienda
-            </a>
-          </li>
-          <li>
-            <a data-title="Servicios" href="#">
-              Servicios
-            </a>
-          </li>
-          <li>
-            <a data-title="Contacto" href="#">
-              Contacto
-            </a>
-          </li>
-        </ul>
-      </Nav_Center>
-      <Nav_Right>
-        <div className="nav_shop">
+    <Headers>
+      <Nav>
+        <Nav_Logo>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 24 24"
@@ -61,25 +20,72 @@ export function Navbar() {
             height="24"
           >
             <path fill="none" d="M0 0h24v24H0z" />
-            <path d="M20 22H4a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1zm-1-2V4H5v16h14zM9 6v2a3 3 0 0 0 6 0V6h2v2A5 5 0 0 1 7 8V6h2z" />
+            <path d="M11 12l-7.071 7.071-1.414-1.414L8.172 12 2.515 6.343 3.929 4.93 11 12zm0 7h10v2H11v-2z" />
           </svg>
-        </div>
-        <div className="nav_menu">
-          <BurgerMenu active={active} handleClick={handleClick} />
-        </div>
-      </Nav_Right>
-    </Nav>
+          <h1>DevCruz</h1>
+        </Nav_Logo>
+        <Nav_Center>
+          <ul className={`${active && 'active'}`}>
+            <li>
+              <a data-title="Inicio" href="#">
+                Inicio{' '}
+              </a>
+            </li>
+            <li>
+              <a data-title="Tienda" href="#">
+                Tienda
+              </a>
+            </li>
+            <li>
+              <a data-title="Nosotros" href="#">
+                Nosotros
+              </a>
+            </li>
+            <li>
+              <a data-title="Servicios" href="#">
+                Servicios
+              </a>
+            </li>
+            <li>
+              <a data-title="Contacto" href="#">
+                Contacto
+              </a>
+            </li>
+          </ul>
+        </Nav_Center>
+        <Nav_Right>
+          <div className="nav_shop">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+            >
+              <path fill="none" d="M0 0h24v24H0z" />
+              <path d="M20 22H4a1 1 0 0 1-1-1V3a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v18a1 1 0 0 1-1 1zm-1-2V4H5v16h14zM9 6v2a3 3 0 0 0 6 0V6h2v2A5 5 0 0 1 7 8V6h2z" />
+            </svg>
+          </div>
+          <div className="nav_menu">
+            <BurgerMenu active={active} handleClick={handleClick} />
+          </div>
+        </Nav_Right>
+      </Nav>
+    </Headers>
   );
 }
 
+const Headers = styled.header`
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 10;
+`;
 const Nav = styled.nav`
   display: flex;
   justify-content: space-between;
-  width: 100vw;
-  height: 50px;
-  background-color: var(--primer-color);
-  position: relative;
-  overflow: hidden;
+  width: 100%;
+  height: 60px;
+  background: linear-gradient(to right, #0072f5 20%, #de2ff7 100%);
 `;
 
 const Nav_Logo = styled.div`

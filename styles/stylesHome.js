@@ -5,9 +5,6 @@ const SectionHome = styled.section`
   width: 100%;
   min-height: 100vh;
   background-color: var(--primer-color);
-  display: flex;
-  justify-content: center;
-  align-items: center;
 
   ::before {
     content: '';
@@ -20,30 +17,50 @@ const SectionHome = styled.section`
     filter: blur(100px);
     background-color: var(--cuarto-color);
   }
+
+  .swiper-pagination {
+    position: initial;
+    margin-top: 2rem;
+  }
+
+  .swiper-pagination-bullet {
+    background-color: var(--segundo-color);
+  }
+  .swiper-pagination-bullet-active {
+    background-color: var(--quinto-color);
+    width: 1.5rem;
+    border-radius: 5px;
+  }
 `;
 
 const WrapperPopular = styled.div`
-  width: 90%;
+  width: 95%;
+  height: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  align-items: center;
+  justify-content: center;
   margin: 0 auto;
+  margin-top: 80px;
 `;
 
 const ContentLeft = styled.div`
   h1 {
     font-size: 2.5rem;
+    margin-left: 30px;
     color: var(--quinto-color);
   }
   p {
     margin-top: 30px;
     font-size: 1.2rem;
     font-weight: 200;
+    margin-left: 30px;
     color: var(--quinto-color);
   }
 
   a {
     margin-top: 30px;
-    margin-left: 30px;
+    margin-left: 50px;
     width: 180px;
     padding: 10px 0;
     display: flex;
@@ -84,7 +101,7 @@ const ContentRight = styled.div`
     height: 400px;
     position: absolute;
     border-radius: 50%;
-    border: solid 2px var(--segundo-color);
+    border: solid 2px rgba(0, 114, 245, 0.5);
 
     ::before,
     ::after {
@@ -106,6 +123,61 @@ const ContentRight = styled.div`
       right: 107px;
     }
   }
+
+  .wrapper_counter {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 30px;
+    border-radius: 15px;
+    background-color: var(--segundo-color);
+
+    ::before {
+      z-index: -1;
+      content: '';
+      position: absolute;
+      width: 80px;
+      height: 30px;
+      border-radius: 15px;
+      background-color: var(--segundo-color);
+      filter: blur(5px);
+    }
+    h3 {
+      font-size: 1rem;
+      color: var(--quinto-color);
+    }
+  }
 `;
 
-export { SectionHome, ContentLeft, ContentRight, WrapperPopular };
+const WrapperSocial = styled.div`
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: 10;
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+  padding: 30px 0px;
+  background-color: var(--segundo-color);
+  border-top-right-radius: 50px;
+  a {
+    all: unset;
+    :hover {
+      cursor: pointer;
+    }
+  }
+`;
+
+export {
+  SectionHome,
+  ContentLeft,
+  ContentRight,
+  WrapperPopular,
+  WrapperSocial,
+};
