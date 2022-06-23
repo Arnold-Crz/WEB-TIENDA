@@ -97,10 +97,10 @@ const Nav_Logo = styled.div`
 
   h1 {
     font-size: 1.5rem;
-    color: var(--quinto-color);
+    color: var(--blanco-color);
   }
   svg {
-    fill: var(--quinto-color);
+    fill: var(--blanco-color);
   }
 `;
 
@@ -122,7 +122,7 @@ const Nav_Center = styled.div`
       width: 100vw;
       height: 100vh;
       overflow: hidden;
-      background-color: var(--septimo-color);
+      background-color: var(--gris-color);
       clip-path: circle(0% at 96% 5%);
       transition: all 0.8s ease-in-out;
       &.active {
@@ -132,11 +132,11 @@ const Nav_Center = styled.div`
 
     li > a {
       font-size: 1rem;
-      color: var(--quinto-color);
+      color: var(--blanco-color);
       @media screen and (max-width: 768px) {
         position: relative;
         font-size: 2rem;
-        color: var(--quinto-color);
+        color: var(--blanco-color);
         font-weight: 700;
         line-height: 4rem;
         text-transform: uppercase;
@@ -144,7 +144,7 @@ const Nav_Center = styled.div`
         ::after {
           content: attr(data-title);
           position: absolute;
-          color: var(--quinto-color);
+          color: var(--blanco-color);
           font-size: 4rem;
           font-weight: 700;
           top: 50%;

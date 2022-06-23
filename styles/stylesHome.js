@@ -4,7 +4,7 @@ const SectionHome = styled.section`
   position: relative;
   width: 100%;
   min-height: 100vh;
-  background-color: var(--primer-color);
+  background-color: var(--negro-color);
 
   ::before {
     content: '';
@@ -15,7 +15,7 @@ const SectionHome = styled.section`
     height: 200px;
     border-radius: 50%;
     filter: blur(100px);
-    background-color: var(--cuarto-color);
+    background-color: var(--purpura-color);
   }
 
   .swiper-pagination {
@@ -24,12 +24,37 @@ const SectionHome = styled.section`
   }
 
   .swiper-pagination-bullet {
-    background-color: var(--segundo-color);
+    background-color: var(--azul-color);
   }
   .swiper-pagination-bullet-active {
-    background-color: var(--quinto-color);
+    background-color: var(--blanco-color);
     width: 1.5rem;
     border-radius: 5px;
+  }
+
+  .mySwiper > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+
+    .wrapper_img {
+      width: 50px;
+    }
+    .swiper-slide {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 50px !important;
+      height: 50px;
+      padding: 10px;
+      cursor: pointer;
+      border-radius: 15px;
+      background-color: var(--gris-color);
+    }
+    .swiper-slide-thumb-active {
+      background-color: var(--azul-color);
+    }
   }
 `;
 
@@ -48,14 +73,14 @@ const ContentLeft = styled.div`
   h1 {
     font-size: 2.5rem;
     margin-left: 30px;
-    color: var(--quinto-color);
+    color: var(--blanco-color);
   }
   p {
     margin-top: 30px;
     font-size: 1.2rem;
     font-weight: 200;
     margin-left: 30px;
-    color: var(--quinto-color);
+    color: var(--blanco-color);
   }
 
   a {
@@ -66,7 +91,7 @@ const ContentLeft = styled.div`
     display: flex;
 
     justify-content: center;
-    color: var(--quinto-color);
+    color: var(--blanco-color);
     border-radius: 10px;
     border: #f49600 solid 5px;
     border-image-outset: linear-gradient(92deg, #0072f5, #de2ff7);
@@ -94,7 +119,7 @@ const ContentRight = styled.div`
     width: 300px;
     height: 300px;
     border-radius: 50%;
-    background-color: var(--septimo-color);
+    background-color: var(--gris-color);
   }
   .wrapper_border {
     width: 400px;
@@ -110,7 +135,7 @@ const ContentRight = styled.div`
       width: 30px;
       height: 30px;
       border-radius: 50%;
-      background-color: var(--segundo-color);
+      background-color: var(--azul-color);
     }
 
     ::before {
@@ -134,7 +159,7 @@ const ContentRight = styled.div`
     width: 80px;
     height: 30px;
     border-radius: 15px;
-    background-color: var(--segundo-color);
+    background-color: var(--azul-color);
 
     ::before {
       z-index: -1;
@@ -143,41 +168,14 @@ const ContentRight = styled.div`
       width: 80px;
       height: 30px;
       border-radius: 15px;
-      background-color: var(--segundo-color);
+      background-color: var(--azul-color);
       filter: blur(5px);
     }
     h3 {
       font-size: 1rem;
-      color: var(--quinto-color);
+      color: var(--blanco-color);
     }
   }
 `;
 
-const WrapperSocial = styled.div`
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 10;
-  width: 80px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 25px;
-  padding: 30px 0px;
-  background-color: var(--segundo-color);
-  border-top-right-radius: 50px;
-  a {
-    all: unset;
-    :hover {
-      cursor: pointer;
-    }
-  }
-`;
-
-export {
-  SectionHome,
-  ContentLeft,
-  ContentRight,
-  WrapperPopular,
-  WrapperSocial,
-};
+export { SectionHome, ContentLeft, ContentRight, WrapperPopular };
