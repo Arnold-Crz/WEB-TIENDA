@@ -1,11 +1,12 @@
 import { getData } from '../services';
-import { Portada } from '../components/ui';
+import { Patrosinadores, Portada } from '../components/ui';
 import Layout from '../components/layout/Layout';
 
 function HomePage({ PortaData }) {
   return (
     <Layout title="Inicio">
       <Portada data={PortaData} />
+      <Patrosinadores />
     </Layout>
   );
 }

@@ -34,6 +34,7 @@ html {
   width: 100%;
   overflow-x: hidden;
   scroll-behavior: smooth;
+  background-color: var(--negro-color) ;
 }
 
 ::-webkit-scrollbar {
@@ -57,7 +58,7 @@ footer {
 body {
   margin: 0;
   padding: 0;
-  background-color: #f2f6f7;
+ 
 }
 
 a {
